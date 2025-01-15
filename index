@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Простой сайт</h1>
+        <p>Добро пожаловать на наш сайт!</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+    
+    <div id="home" class="container">
+        <h2>Главная страница</h2>
+        <p>Здесь можно рассказать о вашем сайте или проекте.</p>
+    </div>
+    
+    <div id="about" class="container">
+        <h2>О нас</h2>
+        <p>Информация о вашем бизнесе или проекте.</p>
+    </div>
+    
+    <div id="contact" class="container">
+        <h2>Контакты</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="message" placeholder="Ваше сообщение" rows="4" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Простой сайт. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Простой скрипт для обработки формы (например, отправка данных на сервер)
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Сообщение отправлено!');
+        });
+    </script>
+</body>
+</html>
